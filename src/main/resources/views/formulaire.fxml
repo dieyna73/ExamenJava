@@ -1,0 +1,67 @@
+<?import javafx.scene.layout.AnchorPane?>
+        <?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.ComboBox?>
+        <?import javafx.scene.control.TableColumn?>
+        <?import javafx.scene.control.TableView?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.layout.AnchorPane?>
+        <?import javafx.scene.text.Font?>
+        <?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.diti.examenapp.controllers.ProduitController">
+    <children>
+        <Text layoutX="300.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gestion des Produits">
+            <font>
+                <Font size="24.0" />
+            </font>
+        </Text>
+        <TableView fx:id="produitTb" layoutX="303.0" layoutY="65.0" prefHeight="276.0" prefWidth="535.0">
+            <columns>
+                <TableColumn fx:id="codeCol" prefWidth="65.5999755859375" text="CODE" />
+                <TableColumn fx:id="nameCol" minWidth="0.0" prefWidth="124.0" text="NOM" />
+                <TableColumn fx:id="priceCol" minWidth="3.20001220703125" prefWidth="103.199951171875" text="PRIX" />
+                <TableColumn fx:id="quantityCol" prefWidth="69.5999755859375" text="QUANTITÉ" />
+                <TableColumn fx:id="categoryCol" prefWidth="71.19989013671875" text="CATÉGORIE" />
+                <TableColumn fx:id="amontCol" prefWidth="118.400146484375" text="MONTANT" />
+            </columns>
+        </TableView>
+        <TextField fx:id="codeTf" layoutX="101.0" layoutY="95.0" prefHeight="26.0" prefWidth="202.0" promptText="Code du produit (auto-généré)" editable="false" />
+        <TextField fx:id="nameTf" layoutX="101.0" layoutY="137.0" prefHeight="26.0" prefWidth="202.0" promptText="Nom du produit" />
+        <TextField fx:id="priceTf" layoutX="101.0" layoutY="199.0" prefHeight="26.0" prefWidth="202.0" promptText="Prix unitaire" />
+        <TextField fx:id="quantityTf" layoutX="101.0" layoutY="259.0" prefHeight="26.0" prefWidth="202.0" promptText="Quantité" />
+        <ComboBox fx:id="categoryCom" layoutX="101.0" layoutY="302.0" prefWidth="150.0" promptText="Sélectionner une catégorie" />
+        <Button fx:id="ajouterbtn" layoutX="49.0" layoutY="363.0" mnemonicParsing="false" onAction="#AjouterProduit" text="Ajouter" />
+        <Text layoutX="18.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CODE" wrappingWidth="47.114349365234375">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="14.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="NOM" wrappingWidth="55.19999999999999">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="18.0" layoutY="219.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRIX" wrappingWidth="47.114349365234375">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="14.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITÉ" wrappingWidth="69.51437377929693">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="7.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CATÉGORIE" wrappingWidth="69.51437377929688">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+        <Text layoutX="400.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="TOTAL :" wrappingWidth="92.5367431640625">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
